@@ -1,0 +1,15 @@
+AGENTS.md
+/docs/
+.notebook/
+__pycache__/
+*.pyc
+.DS_Store
+/dist/
+/local/
+/private/
+*.ipk
+*.pem
+*.key
+.env
+.env.*
+!.env.example
