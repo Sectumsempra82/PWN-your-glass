@@ -76,7 +76,7 @@ class MutationTests(unittest.TestCase):
 
     def test_existing_owned_mount_is_idempotent(self):
         with patch.object(p, 'mountpoints', return_value={'/target'}), \
-             patch.object(p, 'same_file', return_value=True), patch.object(p, 'run') as run:
+             patch.object(p, 'same_file', return_value=True), patch.object(p, 'readonly_mount', return_value=True), patch.object(p, 'run') as run:
             p.bind({'mounts': []}, '/source', '/target')
             run.assert_not_called()
 
@@ -142,6 +142,7 @@ class InstallLifecycleTests(unittest.TestCase):
                 path = Path(value)
                 return path if path.is_relative_to(root) else root / str(value).lstrip('/')
             source = tv_path(p.__file__); source.parent.mkdir(parents=True); source.write_text('# runtime test')
+            hosts = tv_path('/etc/hosts'); hosts.parent.mkdir(parents=True); hosts.write_text('127.0.0.1 localhost\n')
             routes = [{'serviceName': name, 'domain': 'original.example'} for name in p.POLICY['blocked_sdx_services']]
             original_map = json.dumps({'severDomain': {'10.0.0': routes}})
             for name in p.POLICY['sdx_maps']:
@@ -154,7 +155,7 @@ class InstallLifecycleTests(unittest.TestCase):
                  patch.object(p, 'mountpoints', return_value=set()), \
                  patch.object(p, 'run', return_value=subprocess.CompletedProcess([], 1, '')), \
                  patch.object(p, 'get_settings', side_effect=lambda category, keys: before[category]), \
-                 patch.object(p, 'apply', side_effect=fake_apply), patch.object(p, 'verify', return_value=[]):
+                 patch.object(p, 'apply', side_effect=fake_apply), patch.object(p, 'maintenance_units'), patch.object(p, 'verify', return_value=[]):
                 self.assertEqual(p.install(False), [])
                 original_state = json.loads((base / 'state.json').read_text())
                 self.assertFalse(original_state['disable_telnet'])
@@ -167,7 +168,7 @@ class InstallLifecycleTests(unittest.TestCase):
                 self.assertEqual(json.loads((base / 'state.json').read_text())['settings'], original_state['settings'])
             with patch.object(p, 'BASE', base), patch.object(p, 'HOOK', hook), patch.object(p, 'PREFS', prefs), \
                  patch.object(p, 'mountpoints', return_value=set()), patch.object(p, 'run'), \
-                 patch.object(p, 'firewall'), patch.object(p, 'set_settings') as settings:
+                 patch.object(p, 'firewall'), patch.object(p, 'maintenance_units'), patch.object(p, 'set_settings') as settings:
                 self.assertEqual(p.restore(original_state), [])
                 settings.assert_any_call('general', {'homePromotion': 'on'})
                 self.assertEqual(p.restore(original_state), [])

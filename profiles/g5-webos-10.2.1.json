@@ -1,0 +1,404 @@
+{
+  "executables": [
+    "/usr/bin/com.webos.app.voice",
+    "/usr/sbin/acr2",
+    "/usr/sbin/admanager",
+    "/usr/sbin/adoverlay-service",
+    "/usr/sbin/amazon-alexa-adapter",
+    "/usr/sbin/com.webos.service.microphone",
+    "/usr/sbin/contentminer",
+    "/usr/sbin/dangbei-adapter",
+    "/usr/sbin/lg.thinqai.adapter",
+    "/usr/sbin/nlpmanager",
+    "/usr/sbin/nudge",
+    "/usr/sbin/performer",
+    "/usr/sbin/rdxd",
+    "/usr/sbin/service-logger",
+    "/usr/sbin/trigger_alexa",
+    "/usr/sbin/trigger_thinq",
+    "/usr/sbin/update",
+    "/usr/sbin/uploadd",
+    "/usr/sbin/user-context-manager",
+    "/usr/sbin/user-intent-manager",
+    "/usr/sbin/voiceclick",
+    "/usr/sbin/voiceconductor",
+    "/usr/sbin/voiceinput",
+    "/usr/sbin/voiceinput_hidraw",
+    "/usr/sbin/voiceinput_network",
+    "/usr/sbin/voiceinput_preprocessor",
+    "/usr/sbin/voiceinput_sound"
+  ],
+  "units": [
+    "/etc/systemd/system/com.webos.service.microphone.service",
+    "/etc/systemd/system/contentminer.service",
+    "/etc/systemd/system/nudge.service",
+    "/etc/systemd/system/rdxd.service",
+    "/etc/systemd/system/service-logger.service",
+    "/etc/systemd/system/update-remote-config.service",
+    "/etc/systemd/system/update.service",
+    "/etc/systemd/system/uploadd.service",
+    "/etc/systemd/system/user-context-manager.service",
+    "/etc/systemd/system/voiceconductor.service",
+    "/etc/systemd/system/voiceinput.service"
+  ],
+  "mic_devices": [
+    "/dev/snd/pcmC1D0c"
+  ],
+  "sdx_maps": [
+    "/usr/palm/sdx/server_addr_version.conf",
+    "/mnt/lg/cmn_data/sdp/sdx/server_addr_version.conf"
+  ],
+  "blocked_sdx_services": [
+    "sdp_logging",
+    "ibis_stat_secure",
+    "rdx_secure",
+    "nudge_log_secure",
+    "cdpbeacon_secure",
+    "rdxdev_secure"
+  ],
+  "blocked_hosts": [
+    "ad.lgappstv.com",
+    "adsdtvc.com",
+    "alphonso.tv",
+    "cdpbeacon.lgtvcommon.com",
+    "eic.cdpbeacon.lgtvcommon.com",
+    "eic.privacy-blocked.invalid",
+    "eic.rdl.lgtvcommon.com",
+    "es.ibsstat.nextlgsdp.com",
+    "es.info.lgsmartad.com",
+    "es.privacy-blocked.invalid",
+    "es.rdx2.nextlgsdp.com",
+    "eu.info.lgsmartad.com",
+    "eu7.ibsstat.nextlgsdp.com",
+    "eu7.privacy-blocked.invalid",
+    "eu7.rdx2.nextlgsdp.com",
+    "ibsstat.nextlgsdp.com",
+    "info.lgsmartad.com",
+    "privacy-blocked.invalid",
+    "rdl.lgtvcommon.com",
+    "rdx2.nextlgsdp.com",
+    "smart.adtvc.app"
+  ],
+  "settings": {
+    "option": {
+      "watchedListCollection": "off",
+      "usageCare": false,
+      "thirdPartyCookie": "offByUser",
+      "hbbTV": "offByUser",
+      "hbbTvDnt": "on",
+      "hbbTvDeviceId": "off",
+      "turnOnByVoice": "off",
+      "dbgLogUpload": false,
+      "faultLogUpload": false
+    },
+    "general": {
+      "voiceLongDistance": "off",
+      "screenSaverAd": "off",
+      "aiNudge": "off",
+      "aiSettingsNudge": "off",
+      "adCookie": "off",
+      "customizedAd": "off",
+      "homePromotion": "off"
+    },
+    "other": {
+      "contentRecommendation": "off"
+    }
+  },
+  "preserve_units": [
+    "audiod.service",
+    "audiooutputd.service",
+    "pulseaudio.service",
+    "videooutputd.service",
+    "pqcontroller.service",
+    "panelcontroller.service",
+    "arccontroller.service"
+  ],
+  "activation_decisions": {
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceinput.hidraw.service": {
+      "original_sha256": "e4eaff7d5dce1618ad34e68565284d6f5627953adb3ce601853f33aef06edc57",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceinput_hidraw",
+      "asset": "activation/787daa6004e0d8405094.service",
+      "replacement_sha256": "9d6064b6d18bb751c2b206da2e60577b04a4fc8519a0d134bd51c6e32530b094",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceinput.hidraw\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.microphone.service": {
+      "original_sha256": "3eb1c2021a85f8b9bce75c3bc723269899c44acf0dfbb4b981240822381b6ba8",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/com.webos.service.microphone",
+      "asset": "activation/1a4bdbf9e4fd186f546e.service",
+      "replacement_sha256": "8b7b4a083cd65df0f08eb8b00d27a1ebc1e7b9ae1cbbf416644d9f8c27afcacf",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.microphone\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceinput.service": {
+      "original_sha256": "737a64bec17ce8f83b2d15e4be7dde6fcfb45a846884c7b13545cfb5f6a92ebc",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceinput",
+      "asset": "activation/645a5555fbb2446291c5.service",
+      "replacement_sha256": "d92a79e33b07a3f860bb811e7cede024579dbfed67f3de59593d93e4ce7de332",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceinput;com.webos.service.voiceinput.sync;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/dbus-1/services/com.webos.app.voice.service": {
+      "original_sha256": "fdba66c69337da2fe57e9bfb0297480b8379c8511083d7609b13c554af52eb3a",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/bin/com.webos.app.voice",
+      "asset": "activation/d9cf5ba0495cf19e7032.service",
+      "replacement_sha256": "d7af95aaa8966ba3390d3e7047abc33fb7b270e24110c53905b918a685d5bc2c",
+      "replacement": "[D-BUS Service]\nName=com.webos.app.voice\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/dbus-1/system-services/com.webos.app.voice.service": {
+      "original_sha256": "fdba66c69337da2fe57e9bfb0297480b8379c8511083d7609b13c554af52eb3a",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/bin/com.webos.app.voice",
+      "asset": "activation/113a1aee3718325fb3f1.service",
+      "replacement_sha256": "d7af95aaa8966ba3390d3e7047abc33fb7b270e24110c53905b918a685d5bc2c",
+      "replacement": "[D-BUS Service]\nName=com.webos.app.voice\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.contentminer.service": {
+      "original_sha256": "9c7c60a9747f374ca14111cefb97f9f42a341151e8f1ef4bb23aaa02f839d9cc",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/contentminer",
+      "asset": "activation/070e20d074c63d9373c7.service",
+      "replacement_sha256": "ccddc3850766677dbc8011cf28b2ce1cddff5712fe958d04b2601873b0bfabf6",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.contentminer;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/dbus-1/system-services/com.webos.service.sdx.service": {
+      "original_sha256": "f0f057d6f383fbecc9adc589c4c528b1805f5059d61fa3219dfb3169dca540da",
+      "action": "preserve",
+      "reason": "Shared service deliberately retained",
+      "executable": "/usr/sbin/sdx"
+    },
+    "/usr/share/dbus-1/services/com.webos.service.update.service": {
+      "original_sha256": "ac5fcda9fda7853fae88f220d280a226aafd7a32c7ae881c65d714e542258608",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/update",
+      "asset": "activation/d058c2e7bfc77c145111.service",
+      "replacement_sha256": "16c02083db82231d3ab250fb40df39ffb9e675e642ddda2dc145e34ac6525dfe",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.update\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n\n\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.pushclient.service": {
+      "original_sha256": "2408174e560d5f4090832fdbd0afd2e9639f78582d7662ba3adf2932def21c66",
+      "action": "preserve",
+      "reason": "Shared service deliberately retained",
+      "executable": "/usr/sbin/com.webos.service.pushclient"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.trigger.alexa.service": {
+      "original_sha256": "596333ed490644c103301f442439a9d037e5685320dc7079afeb4f9a39b7735d",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/trigger_alexa",
+      "asset": "activation/57657e1b2b9f1d6fad07.service",
+      "replacement_sha256": "5560a5fd2fc427736b929bb1f0c26a21aca933aa3ef4931e637569a8cf87e85c",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.trigger.alexa;com.webos.service.trigger.alexa.sync;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/amazon.alexa.adapter.plugin.service": {
+      "original_sha256": "94ec8e11d17d0158b4b8e63c62fe82ef22368a13b8830261b9abf01248549e47",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/amazon-alexa-adapter",
+      "asset": "activation/6a720375bf7f66e1a372.service",
+      "replacement_sha256": "f6c10d4a6c9debaa00d662318750c0cbb582deba55d8a49f839fa44fad8688cf",
+      "replacement": "[D-BUS Service]\nName=amazon.alexa.adapter.plugin\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.usercontextmanager.service": {
+      "original_sha256": "47856c9f1cd2e41e581998b356210a5b12fc6b411ad74e4f379996b86e260253",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/user-context-manager",
+      "asset": "activation/927ac1bb5c6ef09ccda6.service",
+      "replacement_sha256": "a6239f9c5c6d679e363fd088ecde735eab36afd73aef34fc46c3157b716563f5",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.usercontextmanager\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.userintentmanager.service": {
+      "original_sha256": "29e6eec1e53f4616f5823099e0d5be33c83d5858e671f09ff01e59da4d446899",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/user-intent-manager",
+      "asset": "activation/317d2c3c9c8230fd3d0b.service",
+      "replacement_sha256": "3bf6eb85e9c15ebf46e3aba17eaf4325d564d0483c557de782622bb1ed1b3451",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.userintentmanager\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceinput.network.service": {
+      "original_sha256": "41739e8c99e64a21f7aff9b767b213262204bc41d2f492a475ac67625e04735e",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceinput_network",
+      "asset": "activation/b2ccd12502f2a8f1e0b1.service",
+      "replacement_sha256": "6996314a9c951d2d92b19284eea8728a79636d79d42bc605c30a3090a7f1dcec",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceinput.network\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/dbus-1/services/com.webos.service.sdx.service": {
+      "original_sha256": "f0f057d6f383fbecc9adc589c4c528b1805f5059d61fa3219dfb3169dca540da",
+      "action": "preserve",
+      "reason": "Shared service deliberately retained",
+      "executable": "/usr/sbin/sdx"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceinput.sound.service": {
+      "original_sha256": "307e49a63735225bb415144074c6f1fa1322fc1656929eaa69db7cc792103c7d",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceinput_sound",
+      "asset": "activation/f7adb48a1591baf651e7.service",
+      "replacement_sha256": "86b119c1047f09a77179c3958a44ac0f64fc00ffb0752d2774d52459c0ef20fb",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceinput.sound\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.statisticsmanager.service": {
+      "original_sha256": "7abe9427ddfbad56d94021f1c9f5ed8d47cbbdd8270c7afe31c31a9d7e9544a0",
+      "action": "absent",
+      "reason": "Executable absent; fail verification if it appears",
+      "executable": "/usr/bin/webos-statistics-manager"
+    },
+    "/usr/share/dbus-1/system-services/com.webos.service.update.service": {
+      "original_sha256": "ac5fcda9fda7853fae88f220d280a226aafd7a32c7ae881c65d714e542258608",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/update",
+      "asset": "activation/f1f9ea32f1f273b0a340.service",
+      "replacement_sha256": "16c02083db82231d3ab250fb40df39ffb9e675e642ddda2dc145e34ac6525dfe",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.update\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n\n\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voice.performer.plugin.service": {
+      "original_sha256": "54bb309cf61159983a61c0f8bf3c30e3ddc172244294ab6a5e46b8a383346086",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/performer",
+      "asset": "activation/95d27729ff3eaa550d43.service",
+      "replacement_sha256": "8e474b223b79167b4969250708ec2257e3c0bfe68d8fce35f6e45e4e08559006",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voice.performer.plugin\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/lg.thinqai.adapter.service": {
+      "original_sha256": "01f4405011fbae068722f485875a8c1ec3a20f3ab2440f94b952a0ee0a7a063e",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/lg.thinqai.adapter",
+      "asset": "activation/033bceaf0a59edb62cd1.service",
+      "replacement_sha256": "0b1fe13d587e03416dc5e71994ebb2895055f4537bce405c5697a3e0b96e9f07",
+      "replacement": "[D-BUS Service]\nName=lg.thinqai.adapter\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceinput.preprocessor.service": {
+      "original_sha256": "e5d2b7988b60bb0b6e331e1b316586546ad898ef83c34216b1ece65a4e4d70fd",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceinput_preprocessor",
+      "asset": "activation/7a15bc21bb7c5a3f33fe.service",
+      "replacement_sha256": "7f89fd0b2aae6628fa8e31e5ae9ae87707681343938b276d7bcdb0e4aaa9f956",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceinput.preprocessor;com.webos.service.voiceinput.preprocessor.sync;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/dbus-1/system-services/com.webos.service.acr.service": {
+      "original_sha256": "fcc5ee5b9413095b686992293958dd727e9b1d0a6526ba92abd159e5710e4e8e",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/acr2",
+      "asset": "activation/d777f6c6156f0ceba8c1.service",
+      "replacement_sha256": "dfb78153a340d9518831db2c0e50025114612392636a3074edf4f5cf30fc3514",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.acr;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.rdxd.service": {
+      "original_sha256": "d7b3ef15ad64fbb668747672e9bc99cb536810eee3e87a62e9408f4fe132beaf",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/rdxd",
+      "asset": "activation/74316c5b66ba914e1911.service",
+      "replacement_sha256": "2b0fb4f7e5923ba1dc4d0e0f86a03c0ea0b79ad074333b7b81a029e039f37d5d",
+      "replacement": "[D-BUS Service]\nName=com.webos.rdxd\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/luna-service2/services.d/dangbei.adapter.plugin.service": {
+      "original_sha256": "569c96d3a4f86c5fe8e109e102da83a0a505eede3c0badc62c766ea9e2e9bf1f",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/dangbei-adapter",
+      "asset": "activation/5f8a7d62f7698baa6b01.service",
+      "replacement_sha256": "25c93e00017b7c8f4d9cb5d0154d46b8bde974943e65496e2ec2dc99ef4bb984",
+      "replacement": "[D-BUS Service]\nName=dangbei.adapter.plugin\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.nudge.service": {
+      "original_sha256": "e680669edb1d277b3587f5ee8afca236a455a13dd221bd49fb4bc5c2d6c28e0f",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/nudge",
+      "asset": "activation/9651b022ce3f893a4a0d.service",
+      "replacement_sha256": "5d73484f8addacbf69dd33d96c48d01ce7b53815da3a61763510d5d4de2ebf5e",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.nudge;com.webos.service.nudgeSync\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceconductor.service": {
+      "original_sha256": "09efded96ed33b09e40af9e308d216be24adf3f162ba19af038db4fc06d197b5",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceconductor",
+      "asset": "activation/ae865614f34606adb8d2.service",
+      "replacement_sha256": "83409ff7afebffdafe7eb7ba41c009cfbad596bc66d4b37e8d226c594cec5212",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceconductor\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=static\n"
+    },
+    "/usr/share/dbus-1/services/com.webos.service.admanager.service": {
+      "original_sha256": "0c3efcf5a4f396a60cc30e818db239fb290d0ce426446333e3169781665a8410",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/admanager",
+      "asset": "activation/bc03c6760be86cacd8c1.service",
+      "replacement_sha256": "7d9a74231b12f9d7586daa7ccb1b10eba1195f33c0189b091725f751f9f66bd6",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.admanager\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/dbus-1/services/com.webos.service.acr.service": {
+      "original_sha256": "fcc5ee5b9413095b686992293958dd727e9b1d0a6526ba92abd159e5710e4e8e",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/acr2",
+      "asset": "activation/99908b8aa22d2a833aee.service",
+      "replacement_sha256": "dfb78153a340d9518831db2c0e50025114612392636a3074edf4f5cf30fc3514",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.acr;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.voiceclick.service": {
+      "original_sha256": "74b217c546e07780e75993236bd32cfdeb7695ada9380d3e4ae4c48467d0a68e",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/voiceclick",
+      "asset": "activation/ca29bb433936856022cb.service",
+      "replacement_sha256": "8132d0a4ce403f46f6ff8e0310dfda8f46344806c8cc36b13cbe058434670417",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.voiceclick\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.nlpmanager.service": {
+      "original_sha256": "d58c6d0ab54d55b0e014f838a4e40edeb1dcf6f560469a6b4fc8efff323bb8fa",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/nlpmanager",
+      "asset": "activation/ead1feb6cb9e36842873.service",
+      "replacement_sha256": "b2c2f5af69c116c073a688a3564bc7f40101a1552bbe468d5551de4464add4ae",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.nlpmanager\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.palm.uploadd.service": {
+      "original_sha256": "699ec5b1b0ce4616999f693c0fa214f560b456149f6fc77db1c8922330a1437a",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/uploadd",
+      "asset": "activation/1d47074bea6faff34f2c.service",
+      "replacement_sha256": "e6b419774db51cac4ce00b7ad75a848a8764f0d89ad87d24f2f276cb5414075e",
+      "replacement": "[D-BUS Service]\nName=com.palm.uploadd\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/dbus-1/system-services/com.webos.service.admanager.service": {
+      "original_sha256": "0c3efcf5a4f396a60cc30e818db239fb290d0ce426446333e3169781665a8410",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/admanager",
+      "asset": "activation/89608e0a48ad2a4306f9.service",
+      "replacement_sha256": "7d9a74231b12f9d7586daa7ccb1b10eba1195f33c0189b091725f751f9f66bd6",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.admanager\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    },
+    "/usr/share/luna-service2/services.d/com.webos.service.trigger.thinq.service": {
+      "original_sha256": "1ff960d25d7ea05029737902f82c1bf16107b043ac589503bc71491afff45366",
+      "action": "block",
+      "reason": "Matches an already blocked executable; shared services excluded",
+      "executable": "/usr/sbin/trigger_thinq",
+      "asset": "activation/e09872b0b3f1f6a13f87.service",
+      "replacement_sha256": "ef2751b10891aa53539b5cbe8e9a514e9af665d0f3355815c81a1e46b717539b",
+      "replacement": "[D-BUS Service]\nName=com.webos.service.trigger.thinq;com.webos.service.trigger.thinq.sync;\nExec=/var/lib/webosbrew/dangbro-privacy/blocked-executable\nType=dynamic\n"
+    }
+  },
+  "profile_id": "lg-g5-webos-10.2.1-aarch64"
+}

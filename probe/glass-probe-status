@@ -1,0 +1,18 @@
+#!/bin/bash
+set -u
+printf '%s\n' '=== Identity and clock ==='
+hostname
+date --iso-8601=seconds
+printf '%s\n' '=== Interfaces ==='
+ip -br address
+ip route
+printf '%s\n' '=== Services ==='
+systemctl --no-pager --full status ssh NetworkManager nftables dnsmasq glass-capture || true
+printf '%s\n' '=== TV DHCP leases ==='
+cat /var/lib/misc/dnsmasq.leases 2>/dev/null || true
+printf '%s\n' '=== Firewall counters ==='
+nft list ruleset
+printf '%s\n' '=== Capture storage ==='
+du -sh /var/log/glass-probe
+df -h /
+printf '%s\n' 'TV IPv6 forwarding is DISABLED. This is not evidence of native IPv6 privacy.'

@@ -1,0 +1,628 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "ad.lgappstv.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "adsdtvc.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "alphonso.tv",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "cdpbeacon.lgtvcommon.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eic.cdpbeacon.lgtvcommon.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eic.privacy-blocked.invalid",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "internal SDX sinkhole"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eic.rdl.lgtvcommon.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "es.ibsstat.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "es.info.lgsmartad.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "es.privacy-blocked.invalid",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "internal SDX sinkhole"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "es.rdx2.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eu.info.lgsmartad.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eu7.ibsstat.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eu7.privacy-blocked.invalid",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "internal SDX sinkhole"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "eu7.rdx2.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "ibsstat.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "info.lgsmartad.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "privacy-blocked.invalid",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "internal SDX sinkhole"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "rdl.lgtvcommon.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "rdx2.nextlgsdp.com",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "region": "existing ES/EU/global profile",
+      "status": "approved",
+      "host": "smart.adtvc.app",
+      "evidence": [
+        "retained existing policy; no new endpoint promoted"
+      ],
+      "source": "PWN-your-glass initial installer f314c80",
+      "confidence": "historical component validation; full lifecycle outstanding",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ"
+      ],
+      "purpose": "existing selective G5 policy"
+    },
+    {
+      "host": "ads.lgtvcommon.com",
+      "status": "candidate",
+      "purpose": "SAFE: ad delivery (querylog family) | DECOMMISSIONED 2026-09-12: NXDOMAIN on Google+Cloudflare DoH (A/AAAA/CNAME). Service moved to the eic./aic./kic. cluster names, which are DNS-verified only and therefore filed in src/strict.txt tagged weak — the SAFE tier no longer covers this service. Kept for the audit record.",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "homeprv.lgtvcommon.com",
+      "status": "candidate",
+      "purpose": "SAFE: home-screen provisioning/promos | DECOMMISSIONED 2026-09-12: NXDOMAIN on Google+Cloudflare DoH (A/AAAA/CNAME). Service moved to the eic./aic./kic. cluster names, which are DNS-verified only and therefore filed in src/strict.txt tagged weak — the SAFE tier no longer covers this service. Kept for the audit record.",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "eic.nudge.lgtvcommon.com",
+      "status": "candidate",
+      "purpose": "SAFE: nudge/notification telemetry",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "recommend.lgtvcommon.com",
+      "status": "candidate",
+      "purpose": "SAFE: recommendations/promos | DECOMMISSIONED 2026-09-12: NXDOMAIN on Google+Cloudflare DoH (A/AAAA/CNAME). Service moved to the eic./aic./kic. cluster names, which are DNS-verified only and therefore filed in src/strict.txt tagged weak — the SAFE tier no longer covers this service. Kept for the audit record.",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "eic.wiseconfig.lgtvcommon.com",
+      "status": "candidate",
+      "purpose": "SAFE: cloud-config telemetry (blocked live, apps fine)",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "eic.lgtviot.com",
+      "status": "candidate",
+      "purpose": "SAFE: IoT telemetry (largest observed family, ~5.1k queries)",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "eic.api.lgtviot.com",
+      "status": "candidate",
+      "purpose": "SAFE: IoT telemetry API",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "eic.tv.wiselg.com",
+      "status": "candidate",
+      "purpose": "SAFE: TV telemetry (blocked live, apps fine)",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "de.nextlgsdp.com",
+      "status": "candidate",
+      "purpose": "SAFE: SDP region endpoint, telemetry — never generalised to a region regex: the two-letter region hosts carry TV time/apps traffic on some models (hagezi/dns-blocklists#11438)",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "lgsmartad.com",
+      "status": "candidate",
+      "purpose": "SAFE: dedicated ad zone apex (whole family is ads)",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "de.info.lgsmartad.com",
+      "status": "candidate",
+      "purpose": "SAFE: ad info endpoint [REGION-SCOPED]",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "de.emp.lgsmartplatform.com",
+      "status": "candidate",
+      "purpose": "SAFE: smart-platform telemetry [REGION-SCOPED]",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "initscr.lge.com",
+      "status": "candidate",
+      "purpose": "SAFE: initial-setup telemetry (boot-time only) | DECOMMISSIONED 2026-09-12: NXDOMAIN on Google+Cloudflare DoH. No cluster successor found. Kept for the audit record; harmless to block.",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    },
+    {
+      "host": "ca.nextlgsdp.com",
+      "status": "candidate",
+      "purpose": "SAFE: SDP Canada region endpoint, telemetry — observed live on LG C1 (Canada), ~1/min after power-on + playback; querylog.json attached to PR #9",
+      "region": "upstream G1/other reports; G5 applicability unverified",
+      "source": "https://github.com/furkan-bayrak/lg-tv-blocklist/blob/687ceb5b58562e56a9af2f23a9066a2d7e9c7e78/src/safe.txt",
+      "license": "CC-BY-4.0",
+      "confidence": "upstream claim only",
+      "dependencies": [
+        "streaming",
+        "store",
+        "casting",
+        "ThinQ",
+        "time sync"
+      ],
+      "evidence": [
+        "Requires local repeated observations and acceptance before promotion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+probe/*.sh text eol=lf
+probe/*.py text eol=lf
+probe/glass-probe-status text eol=lf
+*.py text eol=lf
+profiles/*.json text eol=lf
+policies/*.json text eol=lf

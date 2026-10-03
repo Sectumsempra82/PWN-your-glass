@@ -2,17 +2,17 @@
 
 Selective privacy hardening for already-rooted LG webOS TVs.
 
-This repository owns the standalone privacy installer, its policy and its tests. For LAN-only rooting and Homebrew installation, use the separate [local-only dangbro fork](https://github.com/Sectumsempra82/dangbro).
+This repository owns the standalone privacy installer, its policy, and the optional traffic-observation gateway. For LAN-only rooting and Homebrew installation, use the separate [dangbro fork](https://github.com/Sectumsempra82/dangbro).
 
 ## Status
 
 The initial profile targets **OLED65G56LS / webOS TV 10.2.1 / aarch64**. Other models and layouts are refused. Individual controls were exercised on the original G5; the packaged installer still needs a complete clean-TV install, reboot and restore test. It is experimental.
 
-This initial extraction preserves the installer and tests from [dangbro commit 2f28a22](https://github.com/Sectumsempra82/dangbro/tree/2f28a22b4c494ee5db68d26080d8315f6501f1ca) without changing their behavior. It does not incorporate later device-specific maintenance scripts or third-party hardening tools.
+The installer was extracted from [dangbro commit 2f28a22](https://github.com/Sectumsempra82/dangbro/tree/2f28a22b4c494ee5db68d26080d8315f6501f1ca). The current version adds reviewed activation overlays, integrity-gated maintenance, and passive reporting. No new endpoint or capture-path blocks are enabled by this integration.
 
 ## Install on an already-rooted TV
 
-The installer is one file, uses the Python standard library and downloads nothing. It requires the TV's existing **Python 3.10+**, expected Linux tools and working Homebrew persistence. Clone/download this private repository on your computer; no GitHub credential belongs on the TV.
+The installer is one file, uses the Python standard library and downloads nothing. It requires the TV's existing **Python 3.10+**, expected Linux tools and working Homebrew persistence. Clone/download this repository on your computer; no GitHub credential belongs on the TV.
 
 Copy `privacy.py` using existing SSH access or a USB drive. Replace `TV-IP` with your TV's address:
 
@@ -29,7 +29,26 @@ Read [PRIVACY.md](PRIVACY.md) before applying the profile. Keep the physical mic
 python3 /var/lib/webosbrew/dangbro-privacy/privacy.py verify
 ```
 
-The existing `dangbro-privacy` install path, hook name, firewall chain and markers are deliberately retained for compatibility. The repository name does not migrate an existing installation. Existing manual `05-lg-privacy` deployments are refused and need a separately reviewed migration.
+The existing `dangbro-privacy` install path, hook name, firewall chain and markers are deliberately retained. Existing manual `05-lg-privacy` deployments and version-1 packaged installations require individually reviewed migration or recovery. Do not run the new installer over either layout. This public package does not contain a migration tool for a particular TV.
+
+## Read-only evidence
+
+```sh
+python3 /tmp/privacy.py audit --json
+python3 /tmp/privacy.py connections --seconds 60 --interval 1 --json
+```
+
+Save output in a private location. `audit` reads persisted settings, mount and
+process metadata; it never calls Luna services, records audio or reads screen
+contents. `connections` reports TCP/UDP IPv4/IPv6 sockets, including unknown
+owners and missing tables. It does not infer telemetry merely from an IP.
+Exit codes are 0 for observed checks passing, 1 for failure, 2 for incomplete
+evidence. `check` and `verify` also accept `--json`; they retain their 0/1 exit
+convention. Unlike passive `audit`, they may query retained system services.
+
+`health` verifies configured controls and repairs known drift every five minutes.
+Changed startup/runtime files, unsupported firmware and foreign mounts stop
+repair. `/run/pwn-glass-health.json` is bounded local status, not attestation.
 
 Telnet is unchanged by default. To disable it on the next normal boot, first enable Homebrew SSH, install your own authorized key, verify a working login, and run from that SSH session:
 
@@ -53,16 +72,29 @@ Local verification cannot establish zero telemetry or universal microphone conta
 
 ## Development
 
+For the optional Raspberry Pi 4B Ethernet/Wi-Fi observation gateway, see the
+[glass-probe build and operation guide](probe/README.md). The probe captures
+traffic independently of the TV installer; its setup does not apply TV hardening.
+
 Run the host-side suite on Linux, including WSL, using Python 3.10+:
 
 ```sh
 python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s probe/tests -v
+python3 tools/build_profile.py --check
 ```
 
 The runtime imports Linux/POSIX modules, so native Windows Python is not a supported runtime for the installer or this suite. Tests use temporary fixtures and mocks; they do not require a TV.
 
 `AGENTS.md`, `docs/`, `.notebook/`, local device data, credentials and build output stay untracked. This repository contains no rooting exploit, Homebrew IPK, local web server or TV-specific deployment backup.
 
+Edit reviewed profile data under `profiles/` and candidate endpoint records under
+`policies/`, then run `python3 tools/build_profile.py`. The generated `privacy.py`
+remains self-contained. Candidates never enter the generated hosts list.
+
 ## Provenance
 
-Extracted from the privacy component of [Sectumsempra82/dangbro](https://github.com/Sectumsempra82/dangbro). Homebrew persistence is provided by [webosbrew/webos-homebrew-channel](https://github.com/webosbrew/webos-homebrew-channel). No upstream rooting code or downloaded Homebrew package is copied into this repository. A distribution license has not yet been selected.
+Extracted from the privacy component of [Sectumsempra82/dangbro](https://github.com/Sectumsempra82/dangbro). Homebrew persistence is provided by [webosbrew/webos-homebrew-channel](https://github.com/webosbrew/webos-homebrew-channel). No upstream rooting code or downloaded Homebrew package is copied into this repository. Original project code is under the [MIT license](LICENSE); retained third-party material has its own terms.
+
+Pinned donor revisions, changes and retained licenses are listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
