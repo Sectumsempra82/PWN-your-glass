@@ -3,6 +3,7 @@
 import json
 import ipaddress
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
@@ -33,10 +34,34 @@ def network_settings(config: dict) -> dict[str, str]:
             'TV_DHCP_END': str(tv_network.network_address + 120)}
 
 
+def validate_config(config: dict) -> None:
+    if not re.fullmatch(r'[a-z_][a-z0-9_-]{0,31}', config['username']):
+        raise ValueError('Invalid Linux username')
+    if not re.fullmatch(r'[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?', config['hostname']):
+        raise ValueError('Invalid hostname')
+    if not re.fullmatch(r'[A-Z]{2}', config['country']):
+        raise ValueError('Invalid wireless country')
+    if not re.fullmatch(r'[a-z0-9_+-]+', config['keyboard']):
+        raise ValueError('Invalid keyboard layout')
+    if not re.fullmatch(r'[A-Za-z0-9_+-]+(?:/[A-Za-z0-9_+-]+)+', config['timezone']):
+        raise ValueError('Invalid timezone')
+    if not (pathlib.Path('/usr/share/zoneinfo') / config['timezone']).is_file():
+        raise ValueError('Unknown timezone')
+    if not re.fullmatch(r'[0-9a-fA-F]{64}', config['wifi_psk']):
+        raise ValueError('Expected a 64-digit hexadecimal Wi-Fi PSK')
+    for key in ('wifi_ssid', 'ssh_public_key', 'password_hash'):
+        value = config[key]
+        if not isinstance(value, str) or not value or any(char in value for char in '\r\n\x00'):
+            raise ValueError('Invalid private configuration field: ' + key)
+    if not config['ssh_public_key'].startswith(('ssh-ed25519 ', 'ecdsa-sha2-', 'ssh-rsa ')):
+        raise ValueError('Expected an SSH public key')
+
+
 def main() -> None:
     if not pathlib.Path('/root/glass-probe-image-build').exists():
         raise SystemExit('Refusing to configure a system without the image-build marker')
     config = json.loads(pathlib.Path(sys.argv[1]).read_text())
+    validate_config(config)
     networks = network_settings(config)
     def network_values(template: str) -> str:
         for name, value in networks.items():

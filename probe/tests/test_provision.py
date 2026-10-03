@@ -9,6 +9,19 @@ spec.loader.exec_module(provision)
 
 
 class NetworkSettingsTests(unittest.TestCase):
+    def test_private_config_rejects_injected_lines(self):
+        config = {'username': 'operator', 'hostname': 'glass-probe', 'country': 'FR',
+                  'keyboard': 'us', 'timezone': 'Etc/UTC', 'wifi_psk': 'a' * 64,
+                  'wifi_ssid': 'example', 'ssh_public_key': 'ssh-ed25519 AAAA example',
+                  'password_hash': '$6$example'}
+        provision.validate_config(config)
+        for key, value in [('wifi_ssid', 'example\n[connection]'),
+                           ('hostname', 'probe\nmalicious'),
+                           ('username', 'root;echo'),
+                           ('timezone', '../Etc/UTC')]:
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                provision.validate_config({**config, key: value})
+
     def test_configured_networks_define_gateway_and_dhcp(self):
         values = provision.network_settings({'tv_subnet': '192.168.88.0/24', 'home_subnet': '192.168.1.0/24'})
         self.assertEqual(values['TV_GATEWAY'], '192.168.88.1')
